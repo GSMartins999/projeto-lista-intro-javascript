@@ -126,22 +126,35 @@ function retornaPrimeiroElemento(array) {
 function retornaUltimoElemento(array) {
   return array.pop()
 }
-console.log(retornaUltimoElemento(["ola", "abc"]))
+// console.log(retornaUltimoElemento(["ola", "abc"]))
 
 
 
 
 // EXERCÍCIO 11
-function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
+//  Escreva dentro da função trocaPrimeiroEUltimo uma lógica que recebe um array e retorna um array com o primeiro e o último elemento trocados.
+function trocaPrimeiroEUltimo(array) { 
+  let troca = array[0]
 
+  array[0] = array[array.length-1]
+
+  array[array.length-1] = troca
+
+  return array  
 }
+
+// console.log(trocaPrimeiroEUltimo([1,2,3,4,5]))
 
 // EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
+//  Escreva dentro da função checaIgualdadeDesconsiderandoCase uma lógica que recebe duas strings e retorna um booleano (true ou false) indicando se elas são iguais, desconsiderando letras maiúsculas ou minúsculas.
 
+function checaIgualdadeDesconsiderandoCase(string1, string2) {
+  
+  const compara = string1.toUpperCase() === string2.toUpperCase()
+  return (compara)
 }
+
+console.log(checaIgualdadeDesconsiderandoCase("Ola","pika"))
 
 
 
@@ -162,6 +175,7 @@ function checaRenovacaoRG() {
 }
 
 // EXERCÍCIO 14
+
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
 
