@@ -165,7 +165,7 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
 
 
 
-
+// Não consegui fazer os desafios... ;-;
 
 
 // EXERCÍCIO 13
