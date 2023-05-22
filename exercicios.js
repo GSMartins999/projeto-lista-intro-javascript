@@ -154,7 +154,7 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
   return (compara)
 }
 
-console.log(checaIgualdadeDesconsiderandoCase("Ola","pika"))
+// console.log(checaIgualdadeDesconsiderandoCase("Ola","pika"))
 
 
 
@@ -169,11 +169,35 @@ console.log(checaIgualdadeDesconsiderandoCase("Ola","pika"))
 
 
 // EXERCÍCIO 13
-function checaRenovacaoRG() {
-  // implemente sua lógica aqui
+//  Escreva dentro da função checaRenovacaoRG uma lógica que pergunta ao usuário o ano atual, o ano de nascimento de uma pessoa, e o ano em que sua carteira de identidade foi emitida (nesta ordem). 
 
+//A função deve imprimir no console um booleano (true ou false) que indica se a carteira precisa ser renovada ou não. A carteira precisa ser renovada segundo os seguintes critérios:
+
+// * Para pessoas com menos de 20 anos, ou exatamente 20 anos, deve ser renovada de 5 em 5 anos (se for exatamente 5 anos, também deve ser renovada).
+// * Para pessoas entre 20 e 50 anos, ou exatamente 50, deve ser renovada de 10 em 10 anos (se for exatamente 10 anos, também deve ser renovada).
+// * Para pessoas acima dos 50 anos, deve ser renovada de 15 em 15 anos
+
+
+function checaRenovacaoRG() {
+  const anoAtual = Number(prompt("Digite o ano atual: "))
+  const anoNascimento = Number(prompt("Digite o seu ano de nascimento"))
+  const anoQueSuaIdentidadeFoiEmitida = Number(prompt("Digite o ano em que sua indentidade foi emitida: "))
+  const renovada = anoNascimento - anoAtual >= 20
+  console.log(renovada)
+  const precisa = anoQueSuaIdentidadeFoiEmitida - renovada <= 5
+  console.log(`A sua identidade precisa renovar ${precisa}`)
+
+
+
+
+
+  // const compara2 = anoNascimento - anoAtual >= 20
+  // console.log("Sua identidade precisa ser renovada", compara2)
+  // const compara3 = anoNascimento - anoAtual > 50 
+  // console.log("Sua identidade precisa ser renovada",compara3)
 }
 
+console.log(checaRenovacaoRG())
 // EXERCÍCIO 14
 
 function checaAnoBissexto(ano) {
